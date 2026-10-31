@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taqueria El Vaporcito | Auténtico Sabor Mexicano</title>
+    <meta name="description" content="Auténtica taquería mexicana en Phoenix, AZ. Disfruta de los mejores tacos, burritos y sabor tradicional. Ordena en línea ahora.">
+    <meta name="theme-color" content="#FF7A00">
+    
+    <!-- Open Graph SEO -->
+    <meta property="og:title" content="Taqueria El Vaporcito">
+    <meta property="og:description" content="Auténtica taquería mexicana en Phoenix, AZ. Disfruta de los mejores tacos y sabor tradicional.">
+    <meta property="og:image" content="https://res.cloudinary.com/dzklt0a5u/image/upload/v1793472551/IMG-20261027-WA0053_d2akth.jpg">
+    <meta property="og:url" content="https://taqueriaelvaporcito.com">
+    <meta property="og:type" content="restaurant.restaurant">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://taqueriaelvaporcito.com" />
+
+    <link rel="icon" id="favicon" type="image/png" href="https://res.cloudinary.com/dzklt0a5u/image/upload/f_auto,q_auto:eco,dpr_auto,w_250/v1793471421/LOGO_VECTORIZADO_ahzuwl.png">
+    
+    <!-- Google Fonts: Oswald (Headings), Lora (Traditional Accents) & Montserrat (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&family=Lora:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ==========================================================================
+           Reset and Base Styles
+           ========================================================================== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Paleta inspirada en México: Cempasúchil, Chile Ancho, Barro, Agave */
+            --color-primary: #FF7A00; 
+            --color-primary-hover: #E66A00;
+            --color-accent-red: #D32F2F;
+            --color-accent-green: #2E7D32;
+            --color-bg-dark: #1A110C; /* Tono barro/mole oscuro */
+            --color-bg-card: #261A13;
+            --color-text-main: #FDF9F1;
+            --color-text-muted: #D1C4B7;
+            --color-white: #FFFFFF;
+            --color-black: #0A0705;
+            --color-border: #4A3324;
+            
+            --font-heading: 'Oswald', sans-serif;
+            --font-accent: 'Lora', serif;
+            --font-body: 'Montserrat', sans-serif;
+            
+            --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            background-color: var(--color-bg-dark);
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--color-text-main);
+            background-color: var(--color-bg-dark);
+            overflow-x: hidden;
+            /* Patrón sutil estilo azteca/textil en el fondo */
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%23FF7A00' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        /* ==========================================================================
+           Typography & Titles
+           ========================================================================== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 46px;
+            color: var(--color-white);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .section-title.centered {
+            display: block;
+            text-align: center;
+        }
+
+        .section-subtitle-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .section-subtitle-container.centered {
+            justify-content: center;
+        }
+
+        /* Borde decorativo estilo mexicano en lugar de línea simple */
+        .line-decorative {
+            width: 60px;
+            height: 12px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 10'%3E%3Cpath d='M0,5 L10,0 L20,5 L30,0 L40,5 L30,10 L20,5 L10,10 Z' fill='%23FF7A00'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+        }
+
+        .section-subtitle {
+            font-family: var(--font-accent);
+            font-size: 18px;
+            font-style: italic;
+            color: var(--color-primary);
+            letter-spacing: 1px;
+        }
+
+        /* ==========================================================================
+           Navbar (Con toque de colores de la bandera de forma sutil)
+           ========================================================================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(26, 17, 12, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 20px 0;
+            border-bottom: 3px solid;
+            border-image: linear-gradient(to right, var(--color-accent-green) 33%, var(--color-white) 33%, var(--color-white) 66%, var(--color-accent-red) 66%) 1;
+            transition: var(--transition-smooth);
+        }
+
+        .navbar.scrolled {
+            padding: 10px 0;
+            background-color: rgba(15, 10, 7, 0.98);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            font-family: var(--font-heading);
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--color-white);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .navbar-brand span {
+            color: var(--color-primary);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--color-text-main);
+            letter-spacing: 1px;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-primary);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--color-primary);
+        }
+
+        .lang-switch {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-left: 15px;
+            border-left: 2px solid var(--color-border);
+            padding-left: 25px;
+        }
+
+        .lang-btn {
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--color-text-muted);
+            transition: var(--transition-smooth);
+            text-transform: uppercase;
+        }
+
+        .lang-btn.active {
+            color: var(--color-primary);
+            font-weight: 700;
+        }
+
+        .lang-btn:hover {
+            color: var(--color-white);
+        }
+
+        .navbar-toggler {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 1001;
+        }
+
+        .toggler-icon {
+            width: 30px;
+            height: 3px;
+            background-color: var(--color-white);
+            transition: var(--transition-smooth);
+            border-radius: 2px;
+        }
+
+        /* ==========================================================================
+           Hero Section
+           ========================================================================== */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('https://res.cloudinary.com/dzklt0a5u/image/upload/f_auto,q_auto,w_1920/v1777151404/yiebnrm6l10wizbcdbp2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Gradiente cálido oscuro */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to bottom, rgba(26,17,12,0.6) 0%, rgba(15,10,7,0.85) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 0 20px;
+            max-width: 900px;
+            margin-top: 60px;
+        }
+
+        .hero-logo-container {
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .hero-logo {
+            max-height: 200px;
+            width: auto;
+            display: inline-block;
+            filter: drop-shadow(0 0 25px rgba(255, 122, 0, 0.4));
+        }
+
+        .hero-title {
+            font-size: 72px;
+            margin-bottom: 10px;
+            text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.8);
+            line-height: 1.1;
+            color: var(--color-white);
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-accent);
+            font-size: 24px;
+            font-weight: 600;
+            font-style: italic;
+            color: var(--color-primary);
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+            text-shadow: 1px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .hero-address {
+            font-size: 15px;
+            color: var(--color-text-main);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 500;
+            background: rgba(0,0,0,0.5);
+            padding: 10px 20px;
+            border-radius: 30px;
+            display: inline-block;
+            border: 1px solid var(--color-border);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 45px;
+            font-family: var(--font-heading);
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border: 2px solid var(--color-primary);
+            box-shadow: 0 8px 25px rgba(255, 122, 0, 0.3);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-accent-red);
+            border-color: var(--color-accent-red);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(211, 47, 47, 0.4);
+        }
+
+        /* Divisor Papel Picado Top */
+        .papel-picado-divider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0,20 L5,0 L10,20 L15,0 L20,20 L25,0 L30,20 L35,0 L40,20 L45,0 L50,20 L55,0 L60,20 L65,0 L70,20 L75,0 L80,20 L85,0 L90,20 L95,0 L100,20 Z' fill='%231A110C'/%3E%3C/svg%3E");
+            z-index: 2;
+        }
+
+        /* ==========================================================================
+           About Section
+           ========================================================================== */
+        .about-section {
+            padding: 120px 0;
+            background-color: var(--color-bg-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 70px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-text {
+            background: var(--color-bg-card);
+            padding: 50px;
+            border-radius: 12px;
+            border-left: 4px solid var(--color-primary);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .about-text p {
+            color: var(--color-text-muted);
+            margin-bottom: 20px;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .about-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            position: relative;
+        }
+
+        /* Decoración de fondo de imágenes */
+        .about-images::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100%;
+            height: 100%;
+            border: 4px solid var(--color-accent-red);
+            border-radius: 8px;
+            z-index: 0;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            transition: var(--transition-smooth);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .about-image:nth-child(2) {
+            transform: translateY(40px);
+        }
+
+        .about-image:hover {
+            transform: translateY(-5px) scale(1.03);
+            border: 2px solid var(--color-primary);
+        }
+
+        /* ==========================================================================
+           Gallery Section (Masonry Completo de Platillos)
+           ========================================================================== */
+        .gallery-section {
+            padding: 120px 0;
+            background-color: var(--color-bg-card);
+            position: relative;
+        }
+
+        /* Patrón Talavera sutil en fondo de galería */
+        .gallery-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0l20 20-20 20L0 20z' fill='%23D32F2F' fill-opacity='0.02'/%3E%3C/svg%3E");
+            z-index: 0;
+        }
+
+        .gallery-header {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        /* Sistema Masonry CSS para 27 fotos */
+        #gallery-container {
+            position: relative;
+            z-index: 1;
+            column-count: 4;
+            column-gap: 15px;
+            width: 100%;
+        }
+
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 15px;
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            background: var(--color-black);
+            border-bottom: 4px solid transparent;
+            transition: var(--transition-smooth);
+        }
+
+        .gallery-img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            filter: brightness(0.9) contrast(1.1);
+            transition: var(--transition-smooth);
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            border-bottom: 4px solid var(--color-primary);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+            transform: translateY(-5px);
+        }
+
+        .gallery-item:hover .gallery-img {
+            filter: brightness(1.1) contrast(1.2);
+            transform: scale(1.05);
+        }
+
+        /* Divisor Papel Picado Bottom */
+        .papel-picado-divider-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0,0 L5,20 L10,0 L15,20 L20,0 L25,20 L30,0 L35,20 L40,0 L45,20 L50,0 L55,20 L60,0 L65,20 L70,0 L75,20 L80,0 L85,20 L90,0 L95,20 L100,0 L100,20 L0,20 Z' fill='%231A110C'/%3E%3C/svg%3E");
+            z-index: 2;
+            transform: rotate(180deg); /* Invierte el patrón */
+        }
+
+
+        /* ==========================================================================
+           Info Section
+           ========================================================================== */
+        .info-section {
+            padding: 120px 0;
+            background-color: var(--color-bg-dark);
+            background-image: url('https://res.cloudinary.com/dzklt0a5u/image/upload/f_auto,q_auto,w_1920,o_20/v1777151404/yiebnrm6l10wizbcdbp2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+        
+        .info-section::before {
+            content: '';
+            position: absolute;
+            top:0; left:0; right:0; bottom:0;
+            background: linear-gradient(to right, rgba(26,17,12,0.95), rgba(26,17,12,0.85));
+        }
+
+        .info-box {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(38, 26, 19, 0.95);
+            padding: 60px;
+            border-radius: 12px;
+            border: 1px solid var(--color-border);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .info-item {
+            padding: 40px 20px;
+            background-color: var(--color-bg-dark);
+            border-radius: 8px;
+            border-top: 4px solid var(--color-accent-red);
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        .info-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+            border-top: 4px solid var(--color-primary);
+        }
+
+        .info-icon {
+            margin-bottom: 20px;
+            color: var(--color-primary);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 122, 0, 0.1);
+            border-radius: 50%;
+        }
+
+        .info-item h4 {
+            font-size: 24px;
+            color: var(--color-white);
+            margin-bottom: 15px;
+        }
+
+        .info-item p {
+            color: var(--color-text-muted);
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        /* ==========================================================================
+           Footer
+           ========================================================================== */
+        .site-footer {
+            background-color: #0A0705;
+            padding: 80px 0 30px;
+            border-top: 4px solid var(--color-accent-green);
+            position: relative;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .footer-title {
+            font-size: 26px;
+            color: var(--color-white);
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 3px;
+            background-color: var(--color-primary);
+        }
+
+        .footer-col p {
+            color: var(--color-text-muted);
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .social-icons-wrapper {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--color-bg-card);
+            color: var(--color-text-main);
+            border: 1px solid var(--color-border);
+            transition: var(--transition-smooth);
+        }
+
+        .social-link:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border-color: var(--color-primary);
+            transform: translateY(-5px) rotate(8deg);
+        }
+
+        .copyright-bar {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--color-border);
+            color: var(--color-text-muted);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .copyright-bar a {
+            color: var(--color-primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .copyright-bar a:hover {
+            color: var(--color-white);
+        }
+
+        /* ==========================================================================
+           Responsive Design
+           ========================================================================== */
+        @media (max-width: 1024px) {
+            .hero-title { font-size: 60px; }
+            .about-grid { gap: 40px; }
+            #gallery-container { column-count: 3; }
+        }
+
+        @media (max-width: 900px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .about-images { order: -1; margin-bottom: 30px; }
+            .about-text { border-left: none; border-top: 4px solid var(--color-primary); padding: 40px 20px; }
+            .info-grid { grid-template-columns: 1fr; gap: 20px; }
+            .info-box { padding: 40px 20px; }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-toggler { display: flex; }
+            .nav-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background-color: rgba(26, 17, 12, 0.98);
+                padding: 30px 20px;
+                gap: 25px;
+                border-bottom: 3px solid var(--color-primary);
+                transform: translateY(-120%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition-smooth);
+            }
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            .lang-switch {
+                border-left: none;
+                border-top: 1px solid var(--color-border);
+                padding-left: 0;
+                padding-top: 20px;
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .hero-title { font-size: 48px; }
+            .hero-subtitle { font-size: 18px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+            
+            #gallery-container { column-count: 2; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title { font-size: 38px; }
+            .section-title { font-size: 36px; }
+            .btn { width: 100%; max-width: 300px; font-size: 18px; padding: 15px 30px; }
+            .about-images { grid-template-columns: 1fr; }
+            .about-image:nth-child(2) { display: none; }
+            #gallery-container { column-count: 1; }
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: var(--color-bg-dark); }
+        ::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--color-primary); }
+
+    </style>
+    
+    <script>
+        /* Base Data State - Completamente restaurado con todas las 27 imágenes originales y configuraciones */
+        window.MENU_TECH_STATE = {
+            "lang": "es",
+            "showReservations": false,
+            "showAbout": true,
+            "showPromo": false,
+            "showGallery": true,
+            "showCatering": false,
+            "showInfo": true,
+            "showDelivery": false,
+            "cuid": "#",
+            "ruid": "#",
+            "title": "Taqueria El Vaporcito",
+            "logoImg": "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793471421/LOGO_VECTORIZADO_ahzuwl.png",
+            "heroAddress": "2775 West Thomas Rd #104, Phoenix, AZ 85017",
+            "heroImg": "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793472551/IMG-20261027-WA0053_d2akth.jpg",
+            "aboutImg1": "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473160/IMG-20261027-WA0071_p6mugf.jpg",
+            "aboutImg2": "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473163/IMG-20261027-WA0074_bcfbi8.jpg",
+            "gallery": [
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473181/IMG-20261027-WA0085_bgunxa.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473181/IMG-20261027-WA0084_gjhtma.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473182/IMG-20261027-WA0083_htbjsk.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473182/IMG-20261027-WA0082_rem95u.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473183/IMG-20261027-WA0081_owckrz.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473184/IMG-20261027-WA0080_gahjj7.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473184/IMG-20261027-WA0079_zhd9wc.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473184/IMG-20261027-WA0078_1_dogepc.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473185/IMG-20261027-WA0077_bxb83v.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473186/IMG-20261027-WA0075_d9wcd0.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473186/IMG-20261027-WA0076_ldcs7v.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473187/IMG-20261027-WA0074_lge8fi.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473187/IMG-20261027-WA0073_uql0ut.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473188/IMG-20261027-WA0072_rgc3vw.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473189/IMG-20261027-WA0071_o3t4l4.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473189/IMG-20261027-WA0070_f8soza.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473190/IMG-20261027-WA0068_xgbw9p.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473190/IMG-20261027-WA0065_cotzwj.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473191/IMG-20261027-WA0062_lcif3g.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473191/IMG-20261027-WA0064_x9bqnw.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473192/IMG-20261027-WA0061_udbnrs.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473192/IMG-20261027-WA0060_g23uxr.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473193/IMG-20261027-WA0059_jgazhz.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473193/IMG-20261027-WA0058_be1nab.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473194/IMG-20261027-WA0057_oveaip.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473194/IMG-20261027-WA0056_r8iqxy.jpg",
+                "https://res.cloudinary.com/dzklt0a5u/image/upload/v1793473195/IMG-20261027-WA0055_em5owg.jpg"
+            ],
+            "info": {
+                "hours": "Lunes - Domingo: 7:00 AM - 12:00 AM\nViernes - Sábado: 7:00 AM - 3:00 AM\nDomingo: 7:00 AM - 2:00 AM",
+                "phone": "602-269-0902",
+                "address": "2775 West Thomas Rd #104, Phoenix, AZ 85017"
+            },
+            "socials": [
+                {"platform": "instagram", "url": "https://www.instagram.com/taqueria.el.vaporcito/"},
+                {"platform": "facebook", "url": "https://www.facebook.com/taqueria.vaporcito/"},
+                {"platform": "tiktok", "url": "https://www.tiktok.com/@elvaporcito"}
+            ]
+        };
+    </script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="navbar-brand" id="nav-brand">
+                Taqueria <span>El Vaporcito</span>
+            </a>
+            <button class="navbar-toggler" id="navbar-toggler" aria-label="Toggle navigation">
+                <span class="toggler-icon"></span>
+                <span class="toggler-icon"></span>
+                <span class="toggler-icon"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active" data-es="Inicio" data-en="Home">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about-section" class="nav-link" data-es="Nosotros" data-en="About Us">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#gallery-section" class="nav-link" data-es="Galería" data-en="Gallery">Galería</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#info-section" class="nav-link" data-es="Contacto" data-en="Contact">Contacto</a>
+                </li>
+                <!-- Multi-Language Switch -->
+                <li class="lang-switch">
+                    <span id="lang-es" class="lang-btn active">ES</span>
+                    <span style="color: var(--color-border);">|</span>
+                    <span id="lang-en" class="lang-btn">EN</span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero-section">
+        <div class="hero-content">
+            <div class="hero-logo-container">
+                <img src="https://res.cloudinary.com/dzklt0a5u/image/upload/f_auto,q_auto:eco,dpr_auto,w_300/v1793471421/LOGO_VECTORIZADO_ahzuwl.png" id="hero-logo" alt="Taqueria El Vaporcito Logo" class="hero-logo" width="220" height="220">
+            </div>
+            <h1 class="hero-title" data-es="Auténtico Sabor Mexicano" data-en="Authentic Mexican Flavor">Auténtico Sabor Mexicano</h1>
+            <h2 class="hero-subtitle" data-es="Tradición que se saborea desde 2005" data-en="Tradition you can taste since 2005">Tradición que se saborea desde 2005</h2>
+            
+            <div class="hero-buttons">
+                <!-- Redirección explícita requerida para pedidos online -->
+                <a href="https://taqueriaelvaporcito.onlineordering.io/en/?locationId=1615928&orderMode=in_store_pickup" class="btn btn-primary" id="hero-orders-link" data-es="Ordenar en Línea" data-en="Order Online">
+                    Ordenar en Línea
+                </a>
+                
+                <!-- Scripts y componentes originales de Menutech (Ocultos/Integrados por compatibilidad) -->
+                <div style="display:none;">
+                    <script src="https://www.fbgcdn.com/embedder/js/ewm2.js"></script>
+                    <script src="https://menutech.xyz/menutechUI.min.js"></script>
+                    <menutech-orders id="hero-orders" cuid="#" ruid="#" background="#FF7A00" color="#ffffff" data-glf-cuid="#" data-glf-ruid="#"></menutech-orders>
+                    <menutech-reservations id="hero-reservations" cuid="#" ruid="#" background="#2E7D32" color="#ffffff" data-glf-cuid="#" data-glf-ruid="#" data-glf-reservation="true"></menutech-reservations>
+                </div>
+            </div>
+            
+            <p class="hero-address" id="hero-address">2775 West Thomas Rd #104, Phoenix, AZ 85017</p>
+        </div>
+        
+        <!-- Elemento Decorativo: Papel Picado Top -->
+        <div class="papel-picado-divider"></div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section" id="about-section">
+        <div class="container fade-in-up">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="section-title" id="about-title" data-es="Somos Taquería El Vaporcito" data-en="We are Taqueria El Vaporcito">Somos Taquería El Vaporcito</h2>
+                    <div class="section-subtitle-container">
+                        <span class="line-decorative"></span>
+                        <span class="section-subtitle" id="about-subtitle" data-es="Nuestra Historia" data-en="Our Story">Nuestra Historia</span>
+                    </div>
+                    <p id="about-p1" data-es="Desde octubre de 2005, nació un sueño lleno de sabor, tradición y amor por la buena comida. Con cada platillo, hemos compartido momentos especiales, reunido familias y creado recuerdos inolvidables alrededor de nuestra mesa." data-en="Since October 2005, a dream full of flavor, tradition, and love for good food was born. With every dish, we have shared special moments, brought families together, and created unforgettable memories around our table.">Desde octubre de 2005, nació un sueño lleno de sabor, tradición y amor por la buena comida. Con cada platillo, hemos compartido momentos especiales, reunido familias y creado recuerdos inolvidables alrededor de nuestra mesa.</p>
+                    <p id="about-p2" data-es="Hoy, seguimos cocinando con la misma pasión del primer día, ofreciendo sabores que conquistan corazones y una atención que hace sentir a cada cliente como en casa." data-en="Today, we continue cooking with the same passion as the first day, offering flavors that conquer hearts and providing service that makes every customer feel at home.">Hoy, seguimos cocinando con la misma pasión del primer día, ofreciendo sabores que conquistan corazones y una atención que hace sentir a cada cliente como en casa.</p>
+                    <p id="about-p3" data-es="¡Gracias por ser parte de nuestra historia! Desde 2005, compartiendo sabor, tradición y momentos que se disfrutan juntos." data-en="Thank you for being part of our story! Since 2005, sharing flavor, tradition, and moments enjoyed together.">¡Gracias por ser parte de nuestra historia! Desde 2005, compartiendo sabor, tradición y momentos que se disfrutan juntos.</p>
+                </div>
+                <div class="about-images">
+                    <img id="about-img-1" src="https://res.cloudinary.com/dzklt0a5u/image/upload/f_auto,q_auto,w_600/v1793473160/IMG-20261027-WA0071_p6mugf.jpg" alt="Preparación de Tacos El Vaporcito" class="about-image" loading="lazy" width="400" height="400">
+                    <img id="about-img-2" src="https://res.cloudinary.com/dzklt0a5u/image/upload/f_auto,q_auto,w_600/v1793473163/IMG-20261027-WA0074_bcfbi8.jpg" alt="Comida Tradicional Mexicana" class="about-image" loading="lazy" width="400" height="400">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hidden Sections (Promo/Catering/Delivery) kept for structural integrity -->
+    <section class="promo-section" id="promo-section" style="display:none;"></section>
+    <section class="catering-section" id="catering-section" style="display:none;"></section>
+    <section class="delivery-section" id="delivery-section" style="display:none;"></section>
+
+    <!-- Gallery Section (Masonry Grid para todas las fotos) -->
+    <section class="gallery-section" id="gallery-section">
+        <div class="container fade-in-up">
+            <div class="gallery-header">
+                <h2 class="section-title" id="gallery-title" data-es="El Sabor de México" data-en="The Taste of Mexico">El Sabor de México</h2>
+                <div class="section-subtitle-container centered">
+                    <span class="line-decorative"></span>
+                    <span class="section-subtitle" id="gallery-subtitle" data-es="Galería de Platillos" data-en="Dish Gallery">Galería de Platillos</span>
+                </div>
+            </div>
+            
+            <!-- Contenedor CSS Masonry -->
+            <div id="gallery-container">
+                <!-- Javascript will populate all 27 images here -->
+            </div>
+        </div>
+        
+        <!-- Elemento Decorativo: Papel Picado Bottom -->
+        <div class="papel-picado-divider-bottom"></div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-section" id="info-section">
+        <div class="container fade-in-up">
+            <div class="info-box">
+                <h2 class="section-title centered" id="info-title" data-es="Información" data-en="Information">Información</h2>
+                <div class="section-subtitle-container centered">
+                    <span class="line-decorative"></span>
+                    <span class="section-subtitle" id="info-subtitle" data-es="Visítanos" data-en="Visit Us">Visítanos</span>
+                </div>
+                
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <!-- Clock SVG -->
+                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        </div>
+                        <h4 data-es="Horarios" data-en="Opening Hours">Horarios</h4>
+                        <p id="info-hours">Lunes - Domingo: 7:00 AM - 12:00 AM<br>Viernes - Sábado: 7:00 AM - 3:00 AM<br>Domingo: 7:00 AM - 2:00 AM</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <!-- Phone SVG -->
+                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <h4 data-es="Teléfono" data-en="Phone">Teléfono</h4>
+                        <p id="info-phone">602-269-0902</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <!-- Map Pin SVG -->
+                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <h4 data-es="Dirección" data-en="Address">Dirección</h4>
+                        <p id="info-address">2775 West Thomas Rd #104, Phoenix, AZ 85017</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container fade-in-up">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="footer-title" data-es="Encuéntranos" data-en="Find Us">Encuéntranos</h4>
+                    <p id="footer-address">2775 West Thomas Rd #104, Phoenix, AZ 85017</p>
+                    <p id="footer-phone" data-es="Teléfono: 602-269-0902" data-en="Phone: 602-269-0902">Teléfono: 602-269-0902</p>
+                    
+                    <div id="social-icons" class="social-icons-wrapper">
+                        <!-- Redes Sociales renderizadas dinámicamente -->
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title" data-es="Horarios" data-en="Opening Hours">Horarios</h4>
+                    <p id="footer-hours">Lunes - Domingo: 7:00 AM - 12:00 AM<br>Viernes - Sábado: 7:00 AM - 3:00 AM<br>Domingo: 7:00 AM - 2:00 AM</p>
+                </div>
+            </div>
+            
+            <!-- Dynamic Footer Script Section -->
+            <div class="copyright-bar">
+                © 2015-<span id="copyright-year"></span> Powered by <a href="https://menutech.xyz" target="_blank" title="Menutech Official Website">Menutech</a>. <span data-es="Todos los derechos reservados." data-en="All Rights Reserved.">Todos los derechos reservados.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /* ==========================================================================
+           Core Website Logic & Menutech Integration
+           ========================================================================== */
+        
+        // Year calculation snippet
+        document.addEventListener('DOMContentLoaded', () => {
+            const yearSpan = document.getElementById('copyright-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+
+        // Cloudinary Image Optimizer
+        const optimizeCloudinaryUrl = (url, options = {}) => {
+            if (!url || typeof url !== 'string' || !url.includes('res.cloudinary.com')) return url;
+            const [baseUrl, hash] = url.split('#');
+            if (!baseUrl.includes('/upload/')) return url;
+            const parts = baseUrl.split('/upload/');
+
+            let pathSegments = parts[1].split('/');
+            if (pathSegments.length > 1) {
+                const firstSegment = pathSegments[0];
+                const isVersion = /^v\d+$/.test(firstSegment);
+                const isTransformation = !isVersion && (firstSegment.includes('_') || firstSegment.includes(','));
+                if (isTransformation) {
+                    pathSegments.shift(); 
+                }
+            }
+            const cleanPath = pathSegments.join('/');
+
+            let transformations = ['f_auto', 'q_auto:eco', 'dpr_auto'];
+            if (options.width) transformations.push(`w_${options.width}`);
+            else transformations.push('w_600');
+            
+            if (options.height) transformations.push(`h_${options.height}`);
+            if (options.crop) transformations.push(`c_${options.crop}`);
+            
+            const transformationString = transformations.join(',');
+            const optimizedUrl = `${parts[0]}/upload/${transformationString}/${cleanPath}`;
+            return hash ? `${optimizedUrl}#${hash}` : optimizedUrl;
+        };
+
+        const SOCIAL_ICONS = {
+            instagram: `<svg style="width:22px;height:22px;fill:currentColor" viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>`,
+            facebook: `<svg style="width:22px;height:22px;fill:currentColor" viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/></svg>`,
+            tiktok: `<svg style="width:22px;height:22px;fill:currentColor" viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 2.23-1.15 4.39-2.93 5.75-1.7 1.28-3.9 1.83-5.96 1.45-2.22-.38-4.22-1.74-5.28-3.7-1.17-2.12-1.07-4.83.21-6.84 1.2-1.89 3.32-3.1 5.53-3.32 1.07-.1 2.14-.02 3.19.16v4.06c-.84-.25-1.75-.19-2.54.21-.86.43-1.5 1.27-1.69 2.22-.19.98.05 2.02.66 2.8.63.81 1.63 1.27 2.65 1.35 1.02.08 2.06-.09 2.92-.61.85-.5 1.44-1.34 1.65-2.3.09-.4.12-.81.12-1.22V.02z"/></svg>`,
+            twitter: `<svg style="width:22px;height:22px;fill:currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98-3.56-.18-6.73-1.89-8.84-4.48-.37.63-.58 1.37-.58 2.15 0 1.48.75 2.78 1.89 3.55-.7 0-1.36-.21-1.94-.53v.05c0 2.05 1.45 3.78 3.39 4.17-.36.1-.74.15-1.13.15-.27 0-.54-.03-.8-.08.54 1.68 2.11 2.9 3.97 2.93-1.46 1.14-3.29 1.82-5.3 1.82-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23Z"/></svg>`
+        };
+
+        let currentLang = 'es';
+
+        // Translation Engine
+        function applyLanguage(lang) {
+            currentLang = lang;
+            document.querySelectorAll('[data-es]').forEach(el => {
+                const translation = el.getAttribute(`data-${lang}`);
+                if(translation) el.textContent = translation;
+            });
+            
+            // Format phone dynamically based on language for footer
+            const phoneEl = document.getElementById('footer-phone');
+            const dataPhone = window.MENU_TECH_STATE?.info?.phone || '602-269-0902';
+            if (phoneEl) {
+                const prefix = lang === 'es' ? 'Teléfono: ' : 'Phone: ';
+                phoneEl.textContent = prefix + dataPhone;
+                // Sync data attributes so it persists
+                phoneEl.setAttribute('data-es', 'Teléfono: ' + dataPhone);
+                phoneEl.setAttribute('data-en', 'Phone: ' + dataPhone);
+            }
+
+            // Update UI Switches
+            const esBtn = document.getElementById('lang-es');
+            const enBtn = document.getElementById('lang-en');
+            if (!esBtn || !enBtn) return;
+
+            if (lang === 'es') {
+                esBtn.classList.add('active');
+                enBtn.classList.remove('active');
+                document.documentElement.lang = 'es';
+                document.title = "Taqueria El Vaporcito | Auténtico Sabor Mexicano";
+            } else {
+                enBtn.classList.add('active');
+                esBtn.classList.remove('active');
+                document.documentElement.lang = 'en';
+                document.title = "Taqueria El Vaporcito | Authentic Mexican Flavor";
+            }
+        }
+
+        function updateUI(data) {
+            if (!data) return;
+
+            // Enforce language
+            if (data.lang) applyLanguage(data.lang);
+
+            // Title & Branding
+            if (data.title) {
+                const navBrand = document.getElementById('nav-brand');
+                if (navBrand) navBrand.innerHTML = data.title.replace('El Vaporcito', '<span>El Vaporcito</span>');
+            }
+
+            // Images
+            if (data.logoImg) {
+                const logo = document.getElementById('hero-logo');
+                const favicon = document.getElementById('favicon');
+                const optimizedLogo = optimizeCloudinaryUrl(data.logoImg, { width: 350 });
+                if (logo) logo.src = optimizedLogo;
+                if (favicon) favicon.href = optimizedLogo;
+            }
+
+            if (data.heroAddress !== undefined) {
+                const addr = document.getElementById('hero-address');
+                if (addr) addr.textContent = data.heroAddress;
+            }
+
+            if (data.heroImg) {
+                const heroSection = document.getElementById('hero-section');
+                if (heroSection) heroSection.style.backgroundImage = `url('${optimizeCloudinaryUrl(data.heroImg, { width: 1920 })}')`;
+            }
+
+            if (data.aboutImg1) {
+                const img = document.getElementById('about-img-1');
+                if (img) img.src = optimizeCloudinaryUrl(data.aboutImg1, { width: 600 });
+            }
+            if (data.aboutImg2) {
+                const img = document.getElementById('about-img-2');
+                if (img) img.src = optimizeCloudinaryUrl(data.aboutImg2, { width: 600 });
+            }
+
+            // Section Visibility overrides (Keep essential structure intact)
+            const sections = {
+                'about-section': data.showAbout !== false,
+                'promo-section': data.showPromo === true,
+                'gallery-section': data.showGallery !== false,
+                'catering-section': data.showCatering === true,
+                'info-section': data.showInfo !== false,
+                'delivery-section': data.showDelivery === true
+            };
+            
+            Object.keys(sections).forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.style.display = sections[id] ? '' : 'none';
+            });
+
+            // Address and Contact Information Updates
+            if (data.info) {
+                const hoursEl = document.getElementById('info-hours');
+                const phoneEl = document.getElementById('info-phone');
+                const addressEl = document.getElementById('info-address');
+
+                if (hoursEl) hoursEl.innerHTML = (data.info.hours || '').replace(/\n/g, '<br>');
+                if (phoneEl) phoneEl.textContent = data.info.phone || '';
+                if (addressEl) addressEl.textContent = data.info.address || '';
+
+                // Footer Sync
+                const fHours = document.getElementById('footer-hours');
+                const fAddress = document.getElementById('footer-address');
+                if (fHours) fHours.innerHTML = (data.info.hours || '').replace(/\n/g, '<br>');
+                if (fAddress) fAddress.textContent = data.info.address || '';
+                
+                // Re-apply language to fix prefix translations for phone
+                applyLanguage(currentLang);
+            }
+
+            // Social Networks with automatic TikTok detection
+            if (data.socials) {
+                const container = document.getElementById('social-icons');
+                if (container) {
+                    container.innerHTML = data.socials.map(s => {
+                        let platformIcon = s.platform;
+                        // Smart detect tiktok even if platform says twitter
+                        if (s.url.toLowerCase().includes('tiktok.com')) {
+                            platformIcon = 'tiktok';
+                        }
+                        return `
+                        <a href="${s.url}" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="${platformIcon}">
+                            ${SOCIAL_ICONS[platformIcon] || SOCIAL_ICONS['instagram']}
+                        </a>
+                    `}).join('');
+                }
+            }
+
+            // MASONRY GALLERY - Procesamiento de la matriz completa
+            if (data.gallery && data.gallery.length > 0) {
+                const container = document.getElementById('gallery-container');
+                if (container) {
+                    // Crea contenedores individuales para cada imagen para habilitar hover/border y CSS break-inside avoid
+                    container.innerHTML = data.gallery.map(img => `
+                        <div class="gallery-item">
+                            <img src="${optimizeCloudinaryUrl(img, { width: 500, crop: 'scale' })}" class="gallery-img" loading="lazy" alt="Auténtica Comida Mexicana">
+                        </div>
+                    `).join('');
+                }
+            }
+        }
+
+        // Initialize App
+        document.addEventListener('DOMContentLoaded', () => {
+            // Force apply translation to ensure DOM is pristine
+            applyLanguage('es');
+
+            if (window.MENU_TECH_STATE) {
+                updateUI(window.MENU_TECH_STATE);
+            }
+
+            const esBtn = document.getElementById('lang-es');
+            const enBtn = document.getElementById('lang-en');
+            if (esBtn) esBtn.addEventListener('click', () => applyLanguage('es'));
+            if (enBtn) enBtn.addEventListener('click', () => applyLanguage('en'));
+
+            /* Visual UX Interactions */
+            const navbar = document.getElementById('navbar');
+            const navbarToggler = document.getElementById('navbar-toggler');
+            const navMenu = document.getElementById('nav-menu');
+
+            // Scroll Effects
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 80) navbar.classList.add('scrolled');
+                else navbar.classList.remove('scrolled');
+                
+                // Fade in up animation logic
+                document.querySelectorAll('.fade-in-up').forEach(element => {
+                    const rect = element.getBoundingClientRect();
+                    const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                    if (rect.top <= viewHeight - 80) {
+                        element.classList.add('visible');
+                    }
+                });
+            });
+
+            // Initial trigger for fade animations
+            window.dispatchEvent(new Event('scroll'));
+
+            // Mobile Navigation Toggle
+            if (navbarToggler) {
+                navbarToggler.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    const icons = navbarToggler.querySelectorAll('.toggler-icon');
+                    
+                    if (navMenu.classList.contains('active')) {
+                        icons[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                        icons[1].style.opacity = '0';
+                        icons[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+                    } else {
+                        icons.forEach(icon => {
+                            icon.style.transform = 'none';
+                            icon.style.opacity = '1';
+                        });
+                    }
+                });
+            }
+
+            // Close menu on click outside or item click
+            document.addEventListener('click', (e) => {
+                if (!navbarToggler.contains(e.target) && !navMenu.contains(e.target)) {
+                    navMenu.classList.remove('active');
+                    const icons = navbarToggler.querySelectorAll('.toggler-icon');
+                    icons.forEach(icon => { icon.style.transform = 'none'; icon.style.opacity = '1'; });
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    const icons = navbarToggler.querySelectorAll('.toggler-icon');
+                    icons.forEach(icon => { icon.style.transform = 'none'; icon.style.opacity = '1'; });
+                });
+            });
+        });
+
+        // System update hook
+        window.addEventListener('message', (event) => {
+            if (event.data.type === 'UPDATE_CONTENT') {
+                updateUI(event.data.data);
+            }
+        });
+    </script>
+</body>
+</html>
